@@ -1,0 +1,33 @@
+{
+  "name": "react-component-library-starter-kit",
+  "version": "0.0.0",
+  "description": "A starter project to build your own React component library",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brentertz/react-component-library-starter-kit.git"
+  },
+  "author": "Brent Ertz <brent.ertz@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.9.1",
+    "del": "^1.1.1",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.9.0",
+    "gulp-notify": "^2.1.0",
+    "gulp-util": "^3.0.2",
+    "gulp-webpack": "^1.1.2",
+    "jshint-stylish": "^1.0.0",
+    "jsx-loader": "^0.12.2",
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2",
+    "run-sequence": "^1.0.2",
+    "sass-loader": "^0.3.1",
+    "serve-static": "^1.8.1",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0"
+  }
+}

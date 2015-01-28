@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="main">
+      <h3>Hello Component</h3>
+      <div id="hello"></div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="react/dist/react-with-addons.js"></script>
+    <script src="react/dist/JSXTransformer.js"></script>
+    <script src="build/components.js"></script>
+    <script type="text/jsx">
+    (function() {
+      React.render(
+        <Components.Hello/>,
+        document.querySelector('#hello')
+      );
+    })();
+    </script>
+  </body>
+</html>
