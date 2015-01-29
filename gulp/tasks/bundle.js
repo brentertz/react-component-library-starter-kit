@@ -1,7 +1,8 @@
 'use strict';
 
 var gulp = require('gulp');
-var webpack = require('gulp-webpack');
+var gutil = require('gulp-util');
+var webpack = require('webpack');
 var webpackConfig = require('../../webpack.config');
 
 module.exports = function() {
@@ -10,9 +11,13 @@ module.exports = function() {
     webpackConfig.debug = true;
   }
 
-  gulp.task('bundle', function() {
-    return gulp.src('./src/index.js')
-      .pipe(webpack(webpackConfig))
-      .pipe(gulp.dest('./build'));
+  gulp.task('bundle', function(callback) {
+    webpack(webpackConfig, function(err, stats) {
+      if (err) { throw new gutil.PluginError('webpack', err); }
+      gutil.log('[webpack]', stats.toString({
+        colors: true
+      }));
+      callback(null);
+    });
   });
 };

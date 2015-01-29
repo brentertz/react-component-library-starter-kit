@@ -20,7 +20,6 @@
     "gulp-notify": "^2.1.0",
     "gulp-util": "^3.0.2",
     "gulp-watch": "^4.1.0",
-    "gulp-webpack": "^1.1.2",
     "jshint-stylish": "^1.0.0",
     "jsx-loader": "^0.12.2",
     "open": "0.0.5",
