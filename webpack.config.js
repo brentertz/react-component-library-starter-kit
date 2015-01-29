@@ -3,9 +3,7 @@
 var path = require('path');
 
 module.exports = {
-  entry: {
-    app: ['./src/index.js']
-  },
+  entry: './src/index.js',
   externals: [
     {
       react: {
@@ -23,9 +21,7 @@ module.exports = {
         loader: 'jsx?harmony'
       }, {
         test: /\.scss$/,
-        loader: 'style!css!sass?' +
-          'outputStyle=compact&' +
-          'includePaths[]=' + path.resolve(__dirname, './node_modules')
+        loader: 'style!css!sass'
       }
     ]
   },
@@ -35,8 +31,6 @@ module.exports = {
     library: 'Components',
     libraryTarget: 'umd'
   },
-  plugins: [
-  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   }

@@ -21,13 +21,13 @@
     "gulp-webpack": "^1.1.2",
     "jshint-stylish": "^1.0.0",
     "jsx-loader": "^0.12.2",
+    "open": "0.0.5",
     "react": "^0.12.2",
     "react-tools": "^0.12.2",
     "run-sequence": "^1.0.2",
     "sass-loader": "^0.3.1",
     "serve-static": "^1.8.1",
     "style-loader": "^0.8.3",
-    "webpack": "^1.5.3",
-    "webpack-dev-server": "^1.7.0"
+    "webpack": "^1.5.3"
   }
 }
