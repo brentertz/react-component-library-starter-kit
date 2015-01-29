@@ -1,15 +1,16 @@
 'use strict';
 
-var connect = require('connect');
+var browserSync = require('browser-sync');
 var gulp = require('gulp');
 var open = require('open');
-var serveStatic = require('serve-static');
 
 module.exports = function() {
   gulp.task('serve', function() {
-    var app = connect();
-    app.use(serveStatic('./'));
-    app.listen(3000, function() {
+    browserSync({
+      files: ['./build/**/*', './examples/**/*'],
+      server: true,
+      open: false
+    }, function() {
       open('http://localhost:3000/examples/');
     });
   });

@@ -8,6 +8,7 @@ module.exports = function() {
     runSequence(
       'build',
       'serve',
+      'watch',
       callback
     );
   });
