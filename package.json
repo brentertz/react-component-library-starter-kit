@@ -30,5 +30,20 @@
     "serve-static": "^1.8.1",
     "style-loader": "^0.8.3",
     "webpack": "^1.5.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "scriptPreprocessor": "<rootDir>/test/support/preprocessor.js",
+    "testDirectoryName": "test",
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "test/support"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
   }
 }
