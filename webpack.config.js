@@ -1,6 +1,7 @@
 'use strict';
 
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -21,7 +22,7 @@ module.exports = {
         loader: 'jsx?harmony'
       }, {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
       }
     ]
   },
@@ -31,6 +32,9 @@ module.exports = {
     library: 'Components',
     libraryTarget: 'umd'
   },
+  plugins: [
+    new ExtractTextPlugin('components.css', { allChunks: true })
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   }
