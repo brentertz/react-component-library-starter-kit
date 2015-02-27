@@ -8,13 +8,13 @@ var Hello = React.createClass({
     name: React.PropTypes.string
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       name: 'World'
     };
   },
 
-  render: function() {
+  render() {
     return (
       /* jshint ignore:start */
       <h1 className="hello">Hello {this.props.name}</h1>

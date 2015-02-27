@@ -14,3 +14,9 @@ and
 ```
 gulp develop
 ```
+
+and
+
+```
+jest
+```
