@@ -4,6 +4,8 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+  debug: process.env.NODE_ENV !== 'production',
+  devtool: 'sourcemap',
   entry: './src/index.js',
   externals: [
     {
@@ -19,7 +21,7 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx$/,
-        loader: 'jsx?harmony'
+        loader: 'babel-loader?{ optional:["runtime", "es7.objectRestSpread"] }'
       }, {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')

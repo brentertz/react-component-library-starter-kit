@@ -9,9 +9,14 @@
   "author": "Brent Ertz <brent.ertz@gmail.com>",
   "license": "MIT",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {},
   "devDependencies": {
+    "babel": "^5.1.13",
+    "babel-core": "^5.1.13",
+    "babel-loader": "^5.0.0",
     "browser-sync": "^2.0.0-rc1",
     "css-loader": "^0.9.1",
     "del": "^1.1.1",
@@ -24,7 +29,6 @@
     "gulp-watch": "^4.1.0",
     "jest-cli": "^0.4.0",
     "jshint-stylish": "^1.0.0",
-    "jsx-loader": "^0.12.2",
     "open": "0.0.5",
     "react": "^0.12.2",
     "react-tools": "^0.12.2",
@@ -32,7 +36,6 @@
     "sass-loader": "^0.3.1",
     "serve-static": "^1.8.1",
     "style-loader": "^0.8.3",
-    "traceur": "0.0.85",
     "webpack": "^1.5.3"
   },
   "jest": {
@@ -40,16 +43,16 @@
       "js",
       "jsx"
     ],
-    "scriptPreprocessor": "<rootDir>/test/support/preprocessor.js",
-    "setupTestFrameworkScriptFile": "<rootDir>/test/support/setup-test-framework.js",
-    "testDirectoryName": "test",
+    "scriptPreprocessor": "<rootDir>/__tests__/support/preprocessor.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/__tests__/support/setup-test-framework.js",
     "testPathIgnorePatterns": [
       "node_modules",
-      "test/support"
+      "__tests__/support"
     ],
     "unmockedModulePathPatterns": [
-      "<rootDir>/?.*/node_modules/react",
-      "<rootDir>/?.*/node_modules/traceur/bin/traceur-runtime"
+      "babel",
+      "babel-runtime",
+      "<rootDir>/?.*/node_modules/react"
     ]
   }
 }

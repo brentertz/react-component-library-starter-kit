@@ -6,11 +6,6 @@ var webpack = require('webpack');
 var webpackConfig = require('../../webpack.config');
 
 module.exports = function() {
-  if (process.env.NODE_ENV !== 'production') {
-    webpackConfig.devtool = '@eval-source-map';
-    webpackConfig.debug = true;
-  }
-
   gulp.task('bundle', function(callback) {
     webpack(webpackConfig, function(err, stats) {
       if (err) { throw new gutil.PluginError('webpack', err); }

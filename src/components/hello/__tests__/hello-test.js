@@ -1,13 +1,13 @@
 'use strict';
 
-jest.dontMock('../../src/components/hello');
+jest.dontMock('../Hello');
 
 var React = require('react/addons');
-var Hello = require('../../src/components/hello');
+var Hello = require('../Hello');
 var TestUtils = React.addons.TestUtils;
 
 describe('Hello', () => {
-  var ctx = this;
+  var ctx = {};
 
   describe('when no name provided', () => {
     beforeEach(() => {

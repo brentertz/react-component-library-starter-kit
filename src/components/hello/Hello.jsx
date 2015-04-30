@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-require('./styles.scss');
+require('./hello.scss');
 
 var Hello = React.createClass({
   propTypes: {
@@ -17,7 +17,7 @@ var Hello = React.createClass({
   render() {
     return (
       /* jshint ignore:start */
-      <h1 className="hello">Hello {this.props.name}</h1>
+      <h1 className="hello">Hello { this.props.name }</h1>
       /* jshint ignore:end */
     );
   }
