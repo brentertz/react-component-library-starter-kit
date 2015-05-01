@@ -7,7 +7,7 @@ module.exports = function() {
   gulp.task('build', function(callback) {
     runSequence(
       ['clean', 'lint'],
-      ['bundle'],
+      ['webpack'],
       callback
     );
   });
