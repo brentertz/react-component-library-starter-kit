@@ -2,7 +2,7 @@
 
 require('babel/polyfill');
 
-var Hello = require('./components/hello/Hello');
+var Hello = require('./hello/Hello');
 
 module.exports = {
   Hello: Hello

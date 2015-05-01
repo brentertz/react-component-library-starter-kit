@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var Components = require('../../src/index');
+var Components = require('../../components/index');
 
 var App = React.createClass({
   displayName: 'App',

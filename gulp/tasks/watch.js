@@ -5,7 +5,7 @@ var watch = require('gulp-watch');
 
 module.exports = function() {
   gulp.task('watch', function() {
-    watch(['./src/**/*', './demo/**/*'], function() {
+    watch(['./components/**/*', './demo/**/*'], function() {
       gulp.start(['lint', 'webpack']);
     });
   });

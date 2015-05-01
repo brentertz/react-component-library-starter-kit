@@ -11,7 +11,7 @@ module.exports = {
 
   devtool: 'sourcemap',
 
-  entry: './src/index.js',
+  entry: './components/index.js',
 
   externals: [
     {
@@ -52,7 +52,7 @@ module.exports = {
 
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    modulesDirectories: ['src', 'node_modules']
+    modulesDirectories: ['components', 'node_modules']
   },
 
   resolveLoader: {
