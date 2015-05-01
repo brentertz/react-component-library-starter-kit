@@ -11,7 +11,7 @@ module.exports = {
 
   devtool: 'sourcemap',
 
-  entry: './components/index.js',
+  entry: './index.js',
 
   externals: [
     {
@@ -37,7 +37,7 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, '..', 'build'),
     filename: 'components.js',
     library: 'Components',
     libraryTarget: 'umd'
@@ -56,6 +56,6 @@ module.exports = {
   },
 
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
+    root: path.join(__dirname, '..' ,'node_modules')
   }
 };

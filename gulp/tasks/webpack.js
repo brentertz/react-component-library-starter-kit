@@ -3,8 +3,8 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var webpack = require('webpack');
-var webpackComponentsConfig = require('../../webpack-components.config');
-var webpackDemoConfig = require('../../webpack-demo.config');
+var webpackComponentsConfig = require('../../components/webpack.config');
+var webpackDemoConfig = require('../../demo/webpack.config');
 
 function createTask(taskName, webpackConfig) {
   gulp.task(taskName, function(callback) {

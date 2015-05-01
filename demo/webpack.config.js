@@ -11,7 +11,7 @@ module.exports = {
 
   devtool: 'sourcemap',
 
-  entry: './demo/index.jsx',
+  entry: './index.jsx',
 
   module: {
     loaders: [
@@ -29,7 +29,7 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, 'build', 'demo'),
+    path: path.join(__dirname, '..', 'build', 'demo'),
     filename: 'demo.js',
     libraryTarget: 'var'
   },
@@ -42,11 +42,11 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.html'],
+    extensions: ['', '.js', '.jsx'],
     modulesDirectories: ['demo', 'node_modules']
   },
 
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
+    root: path.join(__dirname, '..' ,'node_modules')
   }
 };
