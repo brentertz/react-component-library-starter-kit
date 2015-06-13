@@ -1,9 +1,9 @@
 'use strict';
 
-var React = require('react');
+const React = require('react');
 require('./hello.scss');
 
-var Hello = React.createClass({
+const Hello = React.createClass({
   propTypes: {
     name: React.PropTypes.string
   },

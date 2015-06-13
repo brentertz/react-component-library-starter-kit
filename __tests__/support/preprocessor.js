@@ -1,6 +1,6 @@
 'use strict';
 
-var babel = require('babel');
+const babel = require('babel');
 
 module.exports = {
   process: function(src, path) {

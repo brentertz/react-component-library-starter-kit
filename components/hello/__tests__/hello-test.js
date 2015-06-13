@@ -2,12 +2,12 @@
 
 jest.dontMock('../Hello');
 
-var React = require('react/addons');
-var Hello = require('../Hello');
-var TestUtils = React.addons.TestUtils;
+const React = require('react/addons');
+const Hello = require('../Hello');
+const TestUtils = React.addons.TestUtils;
 
 describe('Hello', () => {
-  var ctx = {};
+  const ctx = {};
 
   describe('when no name provided', () => {
     beforeEach(() => {
@@ -20,12 +20,12 @@ describe('Hello', () => {
 
     describe('render', () => {
       it('renders a Hello component', () => {
-        var hello = TestUtils.findRenderedComponentWithType(ctx.hello, Hello);
+        const hello = TestUtils.findRenderedComponentWithType(ctx.hello, Hello);
         expect(hello).toBeTruthy();
       });
 
       it('renders using default name', () => {
-        var hello = TestUtils.findRenderedComponentWithType(ctx.hello, Hello);
+        const hello = TestUtils.findRenderedComponentWithType(ctx.hello, Hello);
         expect(hello.getDOMNode().textContent).toEqual('Hello World');
       });
     });
@@ -42,7 +42,7 @@ describe('Hello', () => {
 
     describe('render', () => {
       it('renders using provided name', () => {
-        var hello = TestUtils.findRenderedComponentWithType(ctx.hello, Hello);
+        const hello = TestUtils.findRenderedComponentWithType(ctx.hello, Hello);
         expect(hello.getDOMNode().textContent).toEqual('Hello Kitty');
       });
     });

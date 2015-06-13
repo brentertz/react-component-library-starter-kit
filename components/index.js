@@ -1,6 +1,6 @@
 'use strict';
 
-var Hello = require('./hello/Hello');
+const Hello = require('./hello/Hello');
 
 module.exports = {
   Hello: Hello

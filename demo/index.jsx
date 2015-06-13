@@ -1,6 +1,6 @@
-var React = require('react');
+const React = require('react');
 
-var App = require('./app/App');
+const App = require('./app/App');
 require('./index.html');
 
 (() => {
