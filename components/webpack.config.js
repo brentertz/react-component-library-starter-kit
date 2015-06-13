@@ -28,7 +28,11 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx$/,
-        loader: 'babel-loader?{ optional:["runtime", "es7.objectRestSpread"] }'
+        loader: 'babel-loader',
+        query: {
+          optional: ['runtime'],
+          stage: 0
+        }
       }, {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')

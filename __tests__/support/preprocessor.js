@@ -9,7 +9,8 @@ module.exports = {
     if (!/node_modules/.test(path) && babel.canCompile(path)) {
       src = babel.transform(src, {
         filename: path,
-        optional: ['runtime', 'es7.objectRestSpread']
+        optional: ['runtime'],
+        stage: 0
       }).code;
     }
 
