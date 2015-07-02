@@ -11,7 +11,10 @@ module.exports = {
 
   devtool: 'sourcemap',
 
-  entry: './index.jsx',
+  entry: [
+    'webpack/hot/dev-server',
+    './index.jsx'
+  ],
 
   eslint: {
     failOnError: true

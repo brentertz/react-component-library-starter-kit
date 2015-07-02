@@ -6,17 +6,17 @@ A starter project to build your own React component library
 More to come, but for now try...
 
 ```
-gulp build
+npm run build
 ```
 
 and
 
 ```
-gulp develop
+npm run develop
 ```
 
 and
 
 ```
-jest
+npm run test
 ```

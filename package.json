@@ -10,6 +10,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "clean": "rm -rf ./build/**",
+    "build": "NODE_ENV=production npm run clean && npm run lint && webpack --config ./components/webpack.config.js && webpack --config ./demo/webpack.config.js",
+    "develop": "npm run clean && npm run lint && webpack-dev-server --config ./demo/webpack.config.js -hot --content-base build",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -27,12 +30,6 @@
     "eslint-plugin-react": "^2.6.4",
     "extract-text-webpack-plugin": "^0.8.1",
     "file-loader": "^0.8.4",
-    "gulp": "^3.9.0",
-    "gulp-if": "^1.2.5",
-    "gulp-jshint": "^1.11.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-util": "^3.0.5",
-    "gulp-watch": "^4.2.4",
     "jest-cli": "^0.4.12",
     "jshint-stylish": "^2.0.0",
     "react": "^0.13.3",
@@ -41,7 +38,8 @@
     "sass-loader": "^1.0.2",
     "serve-static": "^1.9.3",
     "style-loader": "^0.12.3",
-    "webpack": "^1.9.10"
+    "webpack": "^1.9.10",
+    "webpack-dev-server": "^1.10.1"
   },
   "jest": {
     "moduleFileExtensions": [
