@@ -12,9 +12,7 @@ describe('Hello', () => {
   describe('when no name provided', () => {
     beforeEach(() => {
       ctx.hello = TestUtils.renderIntoDocument(
-        /* jshint ignore:start */
         <Hello/>
-        /* jshint ignore:end */
       );
     });
 
@@ -34,9 +32,7 @@ describe('Hello', () => {
   describe('when name provided', () => {
     beforeEach(() => {
       ctx.hello = TestUtils.renderIntoDocument(
-        /* jshint ignore:start */
         <Hello name="Kitty"/>
-        /* jshint ignore:end */
       );
     });
 
