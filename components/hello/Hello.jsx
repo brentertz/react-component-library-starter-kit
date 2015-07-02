@@ -16,9 +16,7 @@ const Hello = React.createClass({
 
   render() {
     return (
-      /* jshint ignore:start */
       <h1 className="hello">Hello { this.props.name }</h1>
-      /* jshint ignore:end */
     );
   }
 });

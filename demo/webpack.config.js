@@ -13,6 +13,10 @@ module.exports = {
 
   entry: './index.jsx',
 
+  eslint: {
+    failOnError: true
+  },
+
   module: {
     loaders: [
       {
@@ -21,13 +25,23 @@ module.exports = {
         query: {
           optional: ['runtime'],
           stage: 0
-        }
+        },
+        exclude: /node_modules/
       }, {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
+        exclude: /node_modules/
       }, {
         test: /\.html$/,
-        loader: 'file?name=[name].[ext]'
+        loader: 'file?name=[name].[ext]',
+        exclude: /node_modules/
+      }
+    ],
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
       }
     ]
   },
@@ -51,6 +65,6 @@ module.exports = {
   },
 
   resolveLoader: {
-    root: path.join(__dirname, '..' ,'node_modules')
+    root: path.join(__dirname, '..', 'node_modules')
   }
 };

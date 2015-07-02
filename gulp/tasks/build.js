@@ -6,7 +6,7 @@ var runSequence = require('run-sequence');
 module.exports = function() {
   gulp.task('build', function(callback) {
     runSequence(
-      ['clean', 'lint'],
+      ['clean'],
       ['webpack'],
       callback
     );
