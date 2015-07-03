@@ -24,7 +24,7 @@ describe('Hello', () => {
 
       it('renders using default name', () => {
         const hello = TestUtils.findRenderedComponentWithType(ctx.hello, Hello);
-        expect(hello.getDOMNode().textContent).toEqual('Hello World');
+        expect(React.findDOMNode(hello).textContent).toEqual('Hello World');
       });
     });
   });
@@ -39,7 +39,7 @@ describe('Hello', () => {
     describe('render', () => {
       it('renders using provided name', () => {
         const hello = TestUtils.findRenderedComponentWithType(ctx.hello, Hello);
-        expect(hello.getDOMNode().textContent).toEqual('Hello Kitty');
+        expect(React.findDOMNode(hello).textContent).toEqual('Hello Kitty');
       });
     });
   });

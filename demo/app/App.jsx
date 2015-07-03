@@ -3,9 +3,7 @@
 const React = require('react');
 const Components = require('../../components/index');
 
-const App = React.createClass({
-  displayName: 'App',
-
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -16,6 +14,6 @@ const App = React.createClass({
       </div>
     );
   }
-});
+}
 
 module.exports = App;
