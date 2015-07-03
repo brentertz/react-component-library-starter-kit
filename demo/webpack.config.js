@@ -26,6 +26,7 @@ module.exports = {
         test: /\.jsx$/,
         loader: 'babel-loader',
         query: {
+          cacheDirectory: true,
           optional: ['runtime'],
           stage: 0
         },
