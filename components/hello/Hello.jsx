@@ -4,6 +4,8 @@ const React = require('react');
 require('./hello.scss');
 
 class Hello extends React.Component {
+  static displayName = 'Hello';
+
   static propTypes = {
     name: React.PropTypes.string
   };
