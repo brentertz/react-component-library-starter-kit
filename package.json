@@ -11,8 +11,8 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf ./build/**",
-    "build": "NODE_ENV=production npm run clean && npm run lint && webpack --config ./components/webpack.config.js && webpack --config ./demo/webpack.config.js",
-    "develop": "npm run clean && npm run lint && webpack-dev-server --config ./demo/webpack.config.js -hot --content-base build",
+    "build": "npm run clean && webpack --config ./components/webpack.config.js && webpack --config ./demo/webpack.config.js",
+    "develop": "webpack-dev-server --config ./demo/webpack.config.js -hot --content-base build",
     "lint": "eslint .",
     "test": "jest"
   },
