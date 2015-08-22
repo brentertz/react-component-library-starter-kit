@@ -13,7 +13,7 @@ module.exports = {
 
   entry: [
     'webpack/hot/dev-server',
-    './index.jsx'
+    './index.js'
   ],
 
   eslint: {
@@ -23,7 +23,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         query: {
           cacheDirectory: true,
@@ -64,7 +64,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js'],
     modulesDirectories: ['demo', 'node_modules']
   },
 

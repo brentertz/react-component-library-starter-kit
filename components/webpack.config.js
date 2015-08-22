@@ -31,7 +31,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         query: {
           cacheDirectory: true,
@@ -69,7 +69,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js'],
     modulesDirectories: ['components', 'node_modules']
   },
 

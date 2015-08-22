@@ -38,8 +38,7 @@
   },
   "jest": {
     "moduleFileExtensions": [
-      "js",
-      "jsx"
+      "js"
     ],
     "scriptPreprocessor": "<rootDir>/__tests__/support/preprocessor.js",
     "setupTestFrameworkScriptFile": "<rootDir>/__tests__/support/setup-test-framework.js",

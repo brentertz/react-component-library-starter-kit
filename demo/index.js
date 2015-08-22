@@ -1,8 +1,7 @@
 'use strict';
 
-const React = require('react');
-
-const App = require('./app/App');
+import React from 'react';
+import App from './app/App';
 require('./index.html');
 
 (() => {

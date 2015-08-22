@@ -1,9 +1,11 @@
 'use strict';
 
-const React = require('react');
-const Components = require('../../components/index');
+import React, { Component } from 'react';
+import Components from '../../components/index';
 
-class App extends React.Component {
+class App extends Component {
+  static displayName = 'App';
+
   render() {
     return (
       <div>
@@ -16,4 +18,4 @@ class App extends React.Component {
   }
 }
 
-module.exports = App;
+export default App;

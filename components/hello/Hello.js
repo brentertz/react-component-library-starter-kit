@@ -1,13 +1,13 @@
 'use strict';
 
-const React = require('react');
+import React, { Component, PropTypes } from 'react';
 require('./hello.scss');
 
-class Hello extends React.Component {
+class Hello extends Component {
   static displayName = 'Hello';
 
   static propTypes = {
-    name: React.PropTypes.string
+    name: PropTypes.string
   };
 
   static defaultProps = {
@@ -21,4 +21,4 @@ class Hello extends React.Component {
   }
 }
 
-module.exports = Hello;
+export default Hello;
