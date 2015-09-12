@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
-import Components from '../../components/index';
+import { Hello } from '../../components/index';
 
 class App extends Component {
   static displayName = 'App';
@@ -11,8 +11,8 @@ class App extends Component {
       <div>
         <h1>Demo</h1>
         <hr />
-        <Components.Hello />
-        <Components.Hello name="Kitty" />
+        <Hello />
+        <Hello name="Kitty" />
       </div>
     );
   }

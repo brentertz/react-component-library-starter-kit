@@ -2,20 +2,18 @@
 
 A starter project to build your own React component library
 
-
-More to come, but for now try...
-
+#### Build
 ```
 npm run build
 ```
 
-and
+#### Develop
 
 ```
 npm run develop
 ```
 
-and
+#### Tests
 
 ```
 npm run test
